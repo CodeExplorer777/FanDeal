@@ -1,0 +1,262 @@
+
+.fd-poster-review {
+    min-height: calc(100vh - 76px);
+    background: #f7f7f7;
+    padding: 40px 24px 60px;
+}
+
+.fd-poster-review-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fd-review-header {
+    margin-bottom: 30px;
+}
+
+.fd-review-header h1 {
+    font-size: 30px;
+    color: #171717;
+    margin-bottom: 8px;
+}
+
+.fd-review-header p {
+    color: #777;
+    font-size: 14px;
+}
+
+.fd-review-summary {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.fd-review-summary-card {
+    flex: 1;
+    min-width: 150px;
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    padding: 18px 20px;
+}
+
+.fd-review-summary-card span {
+    display: block;
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.fd-review-summary-card strong {
+    font-size: 25px;
+    color: #171717;
+}
+
+.fd-review-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.fd-review-card {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 14px;
+    padding: 20px;
+    min-width: 0;
+}
+
+.fd-review-user {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.fd-review-user h3 {
+    color: #171717;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.fd-review-user p {
+    color: #777;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.fd-review-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.fd-review-status.pending {
+    background: #fff4d6;
+    color: #946500;
+}
+
+.fd-review-status.approved {
+    background: #e5f7eb;
+    color: #18743b;
+}
+
+.fd-review-status.rejected {
+    background: #ffe8e8;
+    color: #b42318;
+}
+
+.fd-review-poster {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto 22px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.fd-review-poster img {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+}
+
+.fd-review-products {
+    border-top: 1px solid #eee;
+    padding-top: 17px;
+    margin-bottom: 18px;
+}
+
+.fd-review-products h4 {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #171717;
+}
+
+.fd-review-product-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 0;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.fd-review-product-row:last-child {
+    border-bottom: none;
+}
+
+.fd-review-product-row img {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #f5f5f5;
+}
+
+.fd-review-product-row div {
+    min-width: 0;
+}
+
+.fd-review-product-row strong {
+    display: block;
+    font-size: 13px;
+    color: #222;
+}
+
+.fd-review-product-row span {
+    font-size: 12px;
+    color: #888;
+}
+
+.fd-review-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.fd-review-actions button {
+    flex: 1;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.fd-review-approve {
+    background: #ffc400;
+    color: #171717;
+}
+
+.fd-review-approve:hover:not(:disabled) {
+    background: #edb600;
+}
+
+.fd-review-reject {
+    background: #fff;
+    color: #c62828;
+    border: 1px solid #e6caca !important;
+}
+
+.fd-review-reject:hover:not(:disabled) {
+    background: #fff0f0;
+}
+
+.fd-review-actions button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.fd-review-state {
+    text-align: center;
+    padding: 65px 20px;
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    color: #777;
+}
+
+.fd-review-error {
+    color: #b42318;
+}
+
+@media (max-width: 850px) {
+    .fd-review-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .fd-poster-review {
+        padding: 25px 15px 40px;
+    }
+
+    .fd-review-header h1 {
+        font-size: 24px;
+    }
+
+    .fd-review-card {
+        padding: 15px;
+    }
+
+    .fd-review-user {
+        flex-direction: column;
+    }
+
+    .fd-review-actions {
+        flex-direction: column;
+    }
+}

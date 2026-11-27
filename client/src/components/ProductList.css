@@ -1,0 +1,388 @@
+
+.fd-home {
+  width: 100%;
+  background: #fff;
+  padding-bottom: 50px;
+}
+
+.fd-hero {
+  max-width: 1200px;
+  min-height: 350px;
+  margin: 28px auto 36px;
+  padding: 45px 55px;
+  background: #fff8df;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  overflow: hidden;
+}
+
+.fd-hero-content {
+  max-width: 550px;
+}
+
+.fd-hero-tag,
+.fd-section-eyebrow {
+  color: #a77c00;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.fd-hero h1 {
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+  margin: 16px 0;
+  letter-spacing: -1.5px;
+}
+
+.fd-hero h1 span {
+  color: #c18f00;
+}
+
+.fd-hero p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.fd-hero-image {
+  width: 42%;
+  display: flex;
+  justify-content: center;
+}
+
+.fd-hero-image img {
+  width: 100%;
+  max-width: 390px;
+  height: 250px;
+  object-fit: contain;
+}
+
+.fd-selection-summary,
+.fd-products-section,
+.fd-create-section {
+  max-width: 1200px;
+  margin: 0 auto 35px;
+}
+
+.fd-selection-summary {
+  padding: 25px;
+  border: 1px solid var(--fd-border);
+  border-radius: 14px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: center;
+}
+
+.fd-selection-summary h3,
+.fd-create-section h3 {
+  margin-bottom: 5px;
+}
+
+.fd-selection-summary p,
+.fd-create-section p {
+  color: var(--fd-muted);
+  font-size: 13px;
+  margin: 0;
+}
+
+.fd-selection-progress {
+  text-align: right;
+}
+
+.fd-selection-progress strong {
+  display: block;
+  font-size: 25px;
+}
+
+.fd-selection-progress span {
+  font-size: 12px;
+  color: var(--fd-muted);
+}
+
+.fd-selection-items {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.fd-selection-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px;
+  border-radius: 9px;
+  background: #f8f8f8;
+  min-width: 0;
+}
+
+.fd-selection-item > span {
+  font-size: 22px;
+  color: #999;
+}
+
+.fd-selection-item > span.complete {
+  color: #18864b;
+}
+
+.fd-selection-item small,
+.fd-selection-item strong {
+  display: block;
+}
+
+.fd-selection-item small {
+  color: #777;
+  font-size: 11px;
+}
+
+.fd-selection-item strong {
+  font-size: 13px;
+  margin-top: 3px;
+  overflow-wrap: anywhere;
+}
+
+.fd-products-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.fd-products-heading h2 {
+  font-size: 29px;
+  margin: 8px 0;
+}
+
+.fd-products-heading p {
+  color: #777;
+  font-size: 14px;
+}
+
+.fd-product-count {
+  font-size: 13px;
+  color: #777;
+}
+
+.fd-category-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.fd-category-tabs button {
+  padding: 10px 22px;
+  border: 1px solid #e7e7e7;
+  border-radius: 30px;
+  background: #fff;
+  color: #555;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.fd-category-tabs button.active,
+.fd-category-tabs button:hover {
+  background: #ffc400;
+  border-color: #ffc400;
+  color: #171717;
+}
+
+.fd-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.fd-product-card {
+  border: 1px solid #eee;
+  border-radius: 13px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.fd-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.fd-product-card.selected {
+  border: 2px solid #e5b000;
+}
+
+.fd-product-image {
+  height: 210px;
+  background: #f8f8f8;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.fd-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.fd-product-category,
+.fd-selected-tag {
+  position: absolute;
+  top: 12px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.fd-product-category {
+  left: 12px;
+  background: #fff;
+}
+
+.fd-selected-tag {
+  right: 12px;
+  background: #e1f5e9;
+  color: #187747;
+}
+
+.fd-product-details {
+  padding: 17px;
+}
+
+.fd-product-details h3 {
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+.fd-product-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.fd-product-bottom > strong {
+  font-size: 19px;
+}
+
+.fd-select-button,
+.fd-selected-button {
+  border: none;
+  border-radius: 7px;
+  padding: 9px 15px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.fd-select-button {
+  background: #ffc400;
+  color: #171717;
+}
+
+.fd-select-button:hover {
+  background: #eab400;
+}
+
+.fd-selected-button {
+  background: #e1f5e9;
+  color: #187747;
+}
+
+.fd-message {
+  text-align: center;
+  padding: 45px 15px;
+  color: #777;
+}
+
+.fd-error {
+  color: #c62828;
+}
+
+.fd-create-section {
+  padding: 25px 30px;
+  border-radius: 14px;
+  background: #171717;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.fd-create-section h3 {
+  color: #fff;
+}
+
+.fd-create-section p {
+  color: #ccc;
+}
+
+.fd-create-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 900px) {
+  .fd-hero,
+  .fd-selection-summary,
+  .fd-products-section,
+  .fd-create-section {
+    width: calc(100% - 32px);
+  }
+
+  .fd-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .fd-hero {
+    padding: 28px 22px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .fd-hero-image {
+    width: 100%;
+  }
+
+  .fd-hero-image img {
+    height: 180px;
+  }
+
+  .fd-selection-items {
+    grid-template-columns: 1fr;
+  }
+
+  .fd-product-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .fd-products-heading {
+    align-items: start;
+  }
+
+  .fd-products-heading h2 {
+    font-size: 24px;
+  }
+
+  .fd-create-section {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .fd-create-button {
+    width: 100%;
+  }
+}

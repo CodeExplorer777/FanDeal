@@ -6,6 +6,7 @@ const cors = require("cors");
 const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
 const productRoutes = require("./routes/productRoutes");
+const posterRoutes = require("./routes/posterRoutes");
 
 
 
@@ -26,6 +27,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/uploads",express.static("uploads"));
 app.use("/api/products",productRoutes);
+app.use("/api/posters",posterRoutes);
 // #endregion
 
 

@@ -1,0 +1,147 @@
+
+.fd-auth-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 18px;
+    background: #f7f7f7;
+}
+
+.fd-auth-card {
+    width: 100%;
+    max-width: 440px;
+    padding: 38px;
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.fd-auth-logo {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    color: #171717;
+    margin-bottom: 8px;
+}
+
+.fd-auth-logo span {
+    color: #e5ad00;
+}
+
+.fd-auth-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.fd-auth-heading h1 {
+    font-size: 23px;
+    color: #171717;
+    margin-bottom: 8px;
+}
+
+.fd-auth-heading p {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.fd-auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.fd-auth-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.fd-auth-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+}
+
+.fd-auth-field input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    font-family: inherit;
+    background: #fff;
+    transition: border-color 0.2s ease;
+}
+
+.fd-auth-field input:focus {
+    border-color: #e5ad00;
+}
+
+.fd-auth-submit {
+    width: 100%;
+    padding: 14px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 8px;
+    background: #ffc400;
+    color: #171717;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.fd-auth-submit:hover:not(:disabled) {
+    background: #edb600;
+}
+
+.fd-auth-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.fd-auth-message {
+    margin-top: 16px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.fd-auth-error {
+    color: #c62828;
+}
+
+.fd-auth-success {
+    color: #18743b;
+}
+
+.fd-auth-footer {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 13px;
+    color: #777;
+}
+
+.fd-auth-footer a {
+    color: #171717;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.fd-auth-footer a:hover {
+    color: #d49f00;
+}
+
+@media (max-width: 480px) {
+    .fd-auth-card {
+        padding: 28px 22px;
+    }
+
+    .fd-auth-logo {
+        font-size: 27px;
+    }
+}

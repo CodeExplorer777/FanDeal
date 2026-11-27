@@ -1,0 +1,51 @@
+
+/* Shared FanDeal application styles */
+
+.fd-section-title {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+
+.fd-page-heading {
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
+  margin: 28px 0;
+}
+
+.fd-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.fd-status-pending {
+  background: #fff0b8;
+  color: #805c00;
+}
+
+.fd-status-approved {
+  background: #d9f3e5;
+  color: #176b42;
+}
+
+.fd-status-rejected {
+  background: #ffe0de;
+  color: #b42318;
+}
+
+@media (max-width: 600px) {
+  .fd-page-heading {
+    font-size: 24px;
+    margin: 22px 0;
+  }
+
+  .fd-section-title {
+    font-size: 21px;
+  }
+}

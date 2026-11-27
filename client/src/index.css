@@ -1,0 +1,157 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #171717;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* FanDeal brand colors */
+  --fd-yellow: #ffc400;
+  --fd-yellow-hover: #eab400;
+  --fd-black: #171717;
+  --fd-text: #252525;
+  --fd-muted: #777777;
+  --fd-background: #ffffff;
+  --fd-surface: #f7f7f7;
+  --fd-border: #eaeaea;
+
+  /* UI */
+  --fd-radius: 12px;
+  --fd-radius-sm: 8px;
+  --fd-shadow: 0 3px 14px rgba(0, 0, 0, 0.06);
+  --fd-transition: 0.2s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--fd-background);
+  color: var(--fd-text);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, p {
+  margin-top: 0;
+}
+
+h1, h2, h3, h4 {
+  color: var(--fd-black);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.fd-container {
+  width: min(1200px, 100% - 40px);
+  margin-inline: auto;
+}
+
+.fd-page {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--fd-background);
+}
+
+.fd-primary-btn {
+  border: none;
+  border-radius: var(--fd-radius-sm);
+  padding: 12px 22px;
+  background: var(--fd-yellow);
+  color: var(--fd-black);
+  font-weight: 700;
+  transition: background var(--fd-transition), transform var(--fd-transition);
+}
+
+.fd-primary-btn:hover {
+  background: var(--fd-yellow-hover);
+  transform: translateY(-1px);
+}
+
+.fd-secondary-btn {
+  border: 1px solid var(--fd-border);
+  border-radius: var(--fd-radius-sm);
+  padding: 11px 22px;
+  background: #ffffff;
+  color: var(--fd-black);
+  font-weight: 600;
+  transition: background var(--fd-transition);
+}
+
+.fd-secondary-btn:hover {
+  background: var(--fd-surface);
+}
+
+.fd-card {
+  background: #ffffff;
+  border: 1px solid var(--fd-border);
+  border-radius: var(--fd-radius);
+  box-shadow: var(--fd-shadow);
+}
+
+.fd-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--fd-border);
+  border-radius: var(--fd-radius-sm);
+  outline: none;
+  background: #ffffff;
+  color: var(--fd-text);
+  transition: border-color var(--fd-transition);
+}
+
+.fd-input:focus {
+  border-color: var(--fd-yellow);
+}
+
+.fd-muted {
+  color: var(--fd-muted);
+}
+
+@media (max-width: 600px) {
+  .fd-container {
+    width: calc(100% - 28px);
+  }
+}

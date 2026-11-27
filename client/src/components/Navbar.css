@@ -1,0 +1,134 @@
+
+.fd-navbar {
+  width: 100%;
+  height: 76px;
+  background: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.fd-navbar-container {
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.fd-logo {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: #171717;
+}
+
+.fd-logo span {
+  color: #171717;
+}
+
+.fd-logo small {
+  color: #ffc400;
+  font-size: 34px;
+}
+
+.fd-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.fd-nav-links a {
+  color: #555555;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.fd-nav-links a:hover,
+.fd-nav-links a.active {
+  color: #d49f00;
+}
+
+.fd-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.fd-nav-username {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555555;
+}
+
+.fd-logout-btn {
+  background: #ffc400;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 19px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #171717;
+  transition: background 0.2s;
+}
+
+.fd-logout-btn:hover {
+  background: #eab400;
+}
+
+/* Admin navigation */
+
+.fd-navbar-admin {
+  background: #171717;
+  border-bottom: none;
+}
+
+.fd-navbar-admin .fd-logo {
+  color: #ffffff;
+}
+
+.fd-navbar-admin .fd-nav-links a {
+  color: #cccccc;
+}
+
+.fd-navbar-admin .fd-nav-links a:hover,
+.fd-navbar-admin .fd-nav-links a.active {
+  color: #ffc400;
+}
+
+@media (max-width: 600px) {
+  .fd-navbar {
+    height: auto;
+  }
+
+  .fd-navbar-container {
+    padding: 14px;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .fd-logo {
+    font-size: 24px;
+  }
+
+  .fd-nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 28px;
+    padding: 8px 0;
+  }
+
+  .fd-nav-actions {
+    gap: 8px;
+  }
+
+  .fd-nav-username {
+    display: none;
+  }
+}

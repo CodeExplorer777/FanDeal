@@ -1,0 +1,224 @@
+
+.fd-admin-products {
+  width: 100%;
+  min-height: calc(100vh - 76px);
+  padding: 38px 20px 60px;
+  background: #fff;
+}
+
+.fd-admin-products-container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+.fd-admin-heading {
+  margin-bottom: 30px;
+}
+
+.fd-admin-heading h1 {
+  margin-bottom: 8px;
+  font-size: clamp(26px, 4vw, 34px);
+  font-weight: 800;
+}
+
+.fd-admin-heading p {
+  color: #777;
+  font-size: 14px;
+}
+
+.fd-admin-form-card {
+  width: min(650px, 100%);
+  margin: 0 auto 48px;
+  padding: 28px;
+  border: 1px solid #eaeaea;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.05);
+}
+
+.fd-admin-form-card h2 {
+  margin-bottom: 24px;
+  font-size: 21px;
+}
+
+.fd-admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.fd-admin-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fd-admin-field label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+}
+
+.fd-admin-field input,
+.fd-admin-field select {
+  width: 100%;
+  min-height: 46px;
+  padding: 11px 13px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  color: #252525;
+}
+
+.fd-admin-field input:focus,
+.fd-admin-field select:focus {
+  border-color: #ffc400;
+}
+
+.fd-admin-file-input {
+  padding: 10px !important;
+  background: #fafafa !important;
+}
+
+.fd-admin-image-preview {
+  width: 120px;
+  height: 120px;
+  margin-top: 8px;
+  padding: 8px;
+  object-fit: contain;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background: #f8f8f8;
+}
+
+.fd-admin-submit {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 6px;
+  border: 0;
+  border-radius: 8px;
+  background: #ffc400;
+  color: #171717;
+  font-weight: 800;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.fd-admin-submit:hover:not(:disabled) {
+  background: #eab400;
+  transform: translateY(-1px);
+}
+
+.fd-admin-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.fd-admin-message {
+  margin-top: 15px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #f7f7f7;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.fd-admin-product-section {
+  margin-top: 42px;
+}
+
+.fd-admin-product-section h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.fd-admin-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.fd-admin-product-card {
+  overflow: hidden;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  background: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.fd-admin-product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.07);
+}
+
+.fd-admin-product-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 190px;
+  padding: 15px;
+  background: #f8f8f8;
+}
+
+.fd-admin-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.fd-admin-product-details {
+  padding: 16px;
+}
+
+.fd-admin-product-details h3 {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.fd-admin-product-category {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #fff5d1;
+  color: #826000;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.fd-admin-product-price {
+  margin: 12px 0 0;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.fd-admin-empty {
+  padding: 35px;
+  border: 1px dashed #ddd;
+  border-radius: 12px;
+  color: #777;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .fd-admin-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .fd-admin-products {
+    padding: 26px 14px 40px;
+  }
+
+  .fd-admin-form-card {
+    padding: 20px;
+  }
+
+  .fd-admin-product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fd-admin-product-image {
+    height: 210px;
+  }
+}
