@@ -1,5 +1,5 @@
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import api from "../../services/api";
 import "./AddProduct.css";
 
@@ -10,14 +10,15 @@ function AdminProducts() {
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState("");
     const [image, setImage] = useState(null);
+    const [preview, setPreview] = useState("");
 
     const [form, setForm] = useState({
-        product_name: "",
-        product_category: "Burger",
-        product_price: "",
+        name: "",
+        category: "Burger",
+        price: "",
     });
 
-    // Fetch products when the page loads
+    // Fetch products
     const fetchProducts = async () => {
         try {
             const response = await api.get("/products");
@@ -51,20 +52,6 @@ function AdminProducts() {
         };
     }, []);
 
-    // Generate image preview
-    const preview = useMemo(() => {
-        return image ? URL.createObjectURL(image) : "";
-    }, [image]);
-
-    // Clean up preview URL
-    useEffect(() => {
-        return () => {
-            if (preview) {
-                URL.revokeObjectURL(preview);
-            }
-        };
-    }, [preview]);
-
     const handleChange = (e) => {
         const { name, value } = e.target;
 
@@ -83,11 +70,13 @@ function AdminProducts() {
             setMessage("Image size must be less than 5 MB.");
             e.target.value = "";
             setImage(null);
+            setPreview("");
             return;
         }
 
         setMessage("");
         setImage(selectedImage);
+        setPreview(URL.createObjectURL(selectedImage));
     };
 
     const handleAddProduct = async (e) => {
@@ -104,9 +93,10 @@ function AdminProducts() {
 
             const formData = new FormData();
 
-            formData.append("product_name", form.product_name);
-            formData.append("product_category", form.product_category);
-            formData.append("product_price", form.product_price);
+            // POST field names expected by backend
+            formData.append("name", form.name);
+            formData.append("category", form.category);
+            formData.append("price", form.price);
             formData.append("image", image);
 
             await api.post("/products", formData);
@@ -114,12 +104,13 @@ function AdminProducts() {
             setMessage("Product added successfully!");
 
             setForm({
-                product_name: "",
-                product_category: "Burger",
-                product_price: "",
+                name: "",
+                category: "Burger",
+                price: "",
             });
 
             setImage(null);
+            setPreview("");
             e.target.reset();
 
             await fetchProducts();
@@ -150,30 +141,26 @@ function AdminProducts() {
                         onSubmit={handleAddProduct}
                     >
                         <div className="fd-admin-field">
-                            <label htmlFor="product_name">
-                                Product Name
-                            </label>
+                            <label htmlFor="name">Product Name</label>
 
                             <input
-                                id="product_name"
-                                name="product_name"
+                                id="name"
+                                name="name"
                                 type="text"
                                 placeholder="Enter product name"
-                                value={form.product_name}
+                                value={form.name}
                                 onChange={handleChange}
                                 required
                             />
                         </div>
 
                         <div className="fd-admin-field">
-                            <label htmlFor="product_category">
-                                Category
-                            </label>
+                            <label htmlFor="category">Category</label>
 
                             <select
-                                id="product_category"
-                                name="product_category"
-                                value={form.product_category}
+                                id="category"
+                                name="category"
+                                value={form.category}
                                 onChange={handleChange}
                                 required
                             >
@@ -184,16 +171,14 @@ function AdminProducts() {
                         </div>
 
                         <div className="fd-admin-field">
-                            <label htmlFor="product_price">
-                                Price (₹)
-                            </label>
+                            <label htmlFor="price">Price (₹)</label>
 
                             <input
-                                id="product_price"
-                                name="product_price"
+                                id="price"
+                                name="price"
                                 type="number"
                                 placeholder="Enter product price"
-                                value={form.product_price}
+                                value={form.price}
                                 onChange={handleChange}
                                 min="0"
                                 step="0.01"
@@ -202,9 +187,7 @@ function AdminProducts() {
                         </div>
 
                         <div className="fd-admin-field">
-                            <label htmlFor="product_image">
-                                Product Image
-                            </label>
+                            <label htmlFor="product_image">Product Image</label>
 
                             <input
                                 id="product_image"

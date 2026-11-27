@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Draggable from "react-draggable";
 
-import posterBackground from "../assets/poster-background.jpg";
+import posterBackground from "../../assets/poster-background.jpg";
 import { createPoster } from "../../services/posterService";
 import "./PosterBuilder.css";
 
