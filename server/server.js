@@ -1,8 +1,14 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
+
+
 const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
+const productRoutes = require("./routes/productRoutes");
+
+
+
 const connectDB = require("./config/db");
 
 dotenv.config();
@@ -18,6 +24,8 @@ app.use(express.json());
 // #region Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
+app.use("/uploads",express.static("uploads"));
+app.use("/api/products",productRoutes);
 // #endregion
 
 
